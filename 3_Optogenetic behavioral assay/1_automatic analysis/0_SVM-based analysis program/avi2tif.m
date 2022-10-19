@@ -1,6 +1,4 @@
-% [videoname,pathname]=uigetfile('Image*.avi','Select a HPA movie','C:\Data\KAI_DATA\Opto HPA Data\170830'); %load manually
-%[videoname,pathname]=uigetfile('Image*.avi','Select a HPA movie','C:\Data\Heat Pan Data\170712'); %load manually
-D=dir(['C:\Data\Heat Pan Data\220505' '\Image*.avi'])
+D=dir(['C:\Data\optogenetic' '\Image*.avi'])
 for i=1:length(D)
     videoname=D(i).name
     pathname=[D(i).folder '\']
