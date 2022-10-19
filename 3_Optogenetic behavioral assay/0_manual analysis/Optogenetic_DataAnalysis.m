@@ -54,8 +54,6 @@ set(gca,'TickLength',[0.025 0.025])
 set(gca,'Color','none')
 ylabel('Rolling (%)')
 box off
-% axis square
-% view(90, 90)
 
 % Fisher exact test
 NotRollingN = N - RollingN;

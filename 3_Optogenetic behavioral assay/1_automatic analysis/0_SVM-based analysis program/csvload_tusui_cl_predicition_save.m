@@ -1,7 +1,7 @@
 clear all
 
 path=pwd
-D=dir(['C:\Data\Heat Pan Data\220505' '\Image*_tif'])
+D=dir(['C:\Data\optogenetic' '\Image*_tif'])
 for foldnum=1:length(D)
     cd([D(foldnum).folder '\' D(foldnum).name])
     D2=dir([pwd '\output*']);

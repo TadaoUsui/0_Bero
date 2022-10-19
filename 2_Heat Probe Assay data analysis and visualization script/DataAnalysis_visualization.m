@@ -95,7 +95,7 @@ axis square
 % Wilcoxon rank sum test
 disp([sprintf('\n'),'Latency: Wilcoxon rank sum test'])
 fprintf(fid,'\nLatency: Wilcoxon rank sum test');
-pair=combnk(1:length(Time),2);%‘S‚Ä‚Ì‘g‚Ý?‡‚í‚¹‚ð?ì?¬
+pair=combnk(1:length(Time),2);
 for j=1:size(pair,1)
     [p,h,stats]=ranksum(Time{pair(j,1)}, Time{:,pair(j,2)});
     W=sprintf(['   ',Genotype{pair(j,1)},' vs ',Genotype{pair(j,2)},': p=%f'],p);
@@ -138,7 +138,7 @@ view(90, 90)
 % Fisher exact test
 disp([sprintf('\n'),'Roll or Not: Fisher exact test'])
 fprintf(fid,'\nRoll or Not: Fisher exact test');
-pair=combnk(1:size(Roll,1),2);%‘S‚Ä‚Ì‘g‚Ý?‡‚í‚¹‚ð?ì?¬
+pair=combnk(1:size(Roll,1),2);
 for j=1:size(pair,1)
     [h,p,stats]=fishertest([Roll(pair(j,1),1:2); Roll(pair(j,2),1:2)]);
     W=sprintf(['   ',Genotype{pair(j,1)},' vs ',Genotype{pair(j,2)},': p=%f'],p);
@@ -177,7 +177,7 @@ pbaspect([1.5 1 1])
 % Chi-squared test
 disp([sprintf('\n'),'Early (0-2 s), Middle (2-5 s), Late (5-10 s), Not (4 groups): Chi-squared test'])
 fprintf(fid,'\nEarly (0-2 s), Middle (2-5 s), Late (5-10 s), Not (4 groups): Chi-squared test');
-pair=combnk(1:size(ELN,1),2);%‘S‚Ä‚Ì‘g‚Ý?‡‚í‚¹‚ð?ì?¬
+pair=combnk(1:size(ELN,1),2);
 for j=1:size(pair,1)
     x1 = [repmat('a',length(Time{pair(j,1)}),1); repmat('b',length(Time{pair(j,2)}),1)];
     x2 = [repmat(1,ELN(pair(j,1),1),1); repmat(2,ELN(pair(j,1),2),1); repmat(3,ELN(pair(j,1),3),1); repmat(4,ELN(pair(j,1),4),1); ...

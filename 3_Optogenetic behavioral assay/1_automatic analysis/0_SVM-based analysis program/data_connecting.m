@@ -3,10 +3,6 @@ frame_length_threshold=1;
 x_length_threshold=5;
 y_length_threshold=5;
 
-
-
-
-
 connect_number=1;
 while isempty(connect_number)==0
     
@@ -16,10 +12,6 @@ while isempty(connect_number)==0
         sta(k)=data{k}.load_range(1);
         en(k)=data{k}.load_range(2);
     end
-
-
-
-
 
     connect_number=[];
     j=1;
@@ -70,7 +62,6 @@ while isempty(connect_number)==0
     end
 
 
-    %% ‚­‚Á‚Â‚¯‚½Œã‚É?A‚à‚¤g‚í‚È‚¢•”•ª‚ğ?í?œ
     if length(connect_number)>0
         sorted_connect_number=sort(connect_number(:,2));
     end
